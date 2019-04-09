@@ -4,3 +4,12 @@ semaphore cutting = 0;
 semaphore mutex = 1;
 int customer1 = 0;
 void barber() {
+while(true) {
+wait(customers); //sleep when there are no waiting customers
+wait(mutex); //mutex for accessing customers1
+customers1 = customers1 - 1;
+signal(barbers);
+signal(mutex);
+cut_hair();
+}
+}
