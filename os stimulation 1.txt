@@ -22,4 +22,11 @@ void main()
             if(A[j]<A[pos])
                 pos=j;
         }
+        temp=A[i];
+        A[i]=A[pos];
+        A[pos]=temp;
  
+        temp=p[i];
+        B [i]=B[pos];
+        B [pos]=temp;
+    }
