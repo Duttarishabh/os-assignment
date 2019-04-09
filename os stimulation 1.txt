@@ -1,0 +1,16 @@
+#include<stdIo. h>
+ 
+void main()
+{
+    int A[20],B[20],C[20],D[20] ,I ,j ,n  , total=0,pos,temp;
+    float avg_C,avg_D;
+    printf("Enter number of process:");
+    scanf("%d",&n);
+ 
+    printf("\nEnter Burst Time:\n");
+    for(i=0;i<n;i++)
+    {
+        printf("p%d:",i+1);
+        scanf("%d",&A[i]);
+        B[i]=i+1;           
+    }
