@@ -1,16 +1,25 @@
 #include<stdIo. h>
- 
+Â 
 void main()
 {
-    int A[20],B[20],C[20],D[20] ,I ,j ,n  , total=0,pos,temp;
-    float avg_C,avg_D;
-    printf("Enter number of process:");
-    scanf("%d",&n);
- 
-    printf("\nEnter Burst Time:\n");
-    for(i=0;i<n;i++)
-    {
-        printf("p%d:",i+1);
-        scanf("%d",&A[i]);
-        B[i]=i+1;           
-    }
+Â Â Â Â int A[20],B[20],C[20],D[20] ,I ,j ,n  , total=0,pos,temp;
+Â Â Â Â float avg_C,avg_D;
+Â Â Â Â printf("Enter number of process:");
+Â Â Â Â scanf("%d",&n);
+Â 
+Â Â Â Â printf("\nEnter Burst Time:\n");
+Â Â Â Â for(i=0;i<n;i++)
+Â Â Â Â {
+Â Â Â Â Â Â Â Â printf("p%d:",i+1);
+Â Â Â Â Â Â Â Â scanf("%d",&A[i]);
+Â Â Â Â Â Â Â Â B[i]=i+1;Â Â Â Â Â Â Â Â Â Â  
+Â Â Â Â }
+    for(i=0;i<n;i++)
+Â Â Â Â {
+Â Â Â Â Â Â Â Â pos=i;
+Â Â Â Â Â Â Â Â for(j=i+1;j<n;j++)
+Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â if(A[j]<A[pos])
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â pos=j;
+Â Â Â Â Â Â Â Â }
+Â 
