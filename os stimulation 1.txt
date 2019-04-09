@@ -41,3 +41,26 @@ void main()
     }
   avg_C=(float)total/n;      
      total=0;
+       printf("\nProcess\t    Burst Time    \tWaiting Time\tTurnaround Time");
+
+    for(i=0;i<n;i++)
+
+    {
+
+        D[i]=A[i]+C[i];     //calculate turnaround time
+
+        total+=D[i];
+
+        printf("\np%d\t\t  %d\t\t    %d\t\t\t%d", B[i],A[i],C[i],D[i]);
+
+    }
+
+ 
+
+    Avg_D=(float)total/n;     
+
+    printf("\n\nAverage Waiting Time=%f",avg_C);
+
+    printf("\nAverage Turnaround Time=%f\n",avg D);
+
+}
