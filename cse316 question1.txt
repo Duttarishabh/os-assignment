@@ -24,3 +24,5 @@ get_haircut();
 }
 else { //do nothing (leave) when all chairs are used.
 signal(mutex);
+}
+}
