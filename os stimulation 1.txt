@@ -30,3 +30,14 @@ void main()
         B [i]=B[pos];
         B [pos]=temp;
     }
+        C[0] = 0
+    for(i=1;i<n;i++)
+    {
+        C[i]=0;
+        for(j=0;j<i;j++)
+            C[i]+=A[j];
+ 
+        total+=C[i];
+    }
+  avg_C=(float)total/n;      
+     total=0;
