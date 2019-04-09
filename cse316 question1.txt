@@ -13,3 +13,14 @@ signal(mutex);
 cut_hair();
 }
 }
+void customer() {
+wait(mutex); //mutex for accessing customers1
+if (customers1 < n) {
+customers1 = customers1 + 1;
+signal(customers);
+signal(mutex);
+wait(barbers); //wait for available barbers
+get_haircut();
+}
+else { //do nothing (leave) when all chairs are used.
+signal(mutex);
