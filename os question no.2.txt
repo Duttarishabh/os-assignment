@@ -46,3 +46,8 @@ int count,j,n,time,remain,flag=0,time_quantum;
     else 
       count=0; 
   } 
+  printf("\nAverage Waiting Time= %f\n",wait_time*1.0/n); 
+  printf("Avg Turnaround Time = %f",turnaround_time*1.0/n); 
+  
+  getch();
+}
