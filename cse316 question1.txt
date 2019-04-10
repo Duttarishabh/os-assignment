@@ -3,17 +3,17 @@ question1.A barbershop consists of a waiting room with n chairs and a barber roo
 leaves the shop. If the barber is busy but chairs are available, then the customer sits in one of the free chairs. If the 
 barber is asleep, the customer wakes up the barber. Write a program to coordinate the barber and the customers.
 
-semaphore customers = 0;
-semaphore barbers = 0;
-semaphore cutting = 0;
+semaphore customer_1 = 0;
+semaphore barbers_1 = 0;
+semaphore cuttinghair_1 = 0;
 semaphore mutex = 1;
-int customer1 = 0;
-void barber() {
+int customers1 = 0;
+void barber123() {
 while(true) {
-wait(customers); //sleep when there are no waiting customers
+wait(customer_1); //sleep when there are no waiting customers
 wait(mutex); //mutex for accessing customers1
 customers1 = customers1 - 1;
-signal(barbers);
+signal(barbers_1);
 signal(mutex);
 cut_hair();
 }
@@ -24,7 +24,7 @@ if (customers1 < n) {
 customers1 = customers1 + 1;
 signal(customers);
 signal(mutex);
-wait(barbers); //wait for available barbers
+wait(barbers_1); //wait for available barbers
 get_haircut();
 }
 else { //do nothing (leave) when all chairs are used.
@@ -32,9 +32,9 @@ signal(mutex);
 }
 }
 cut_hair(){
-waiting(cutting);
+waiting(cuttinghair_1);
 }
 get_haircut(){
 get hair cut for some time;
-signal(cutting);
+signal(cuttinghair_1);
 }
